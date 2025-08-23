@@ -6,3 +6,5 @@ statsmodels==0.14.0
 pymc==5.25.1
 pytensor==2.31.7
 arviz==0.22.0
+flask==3.0.3
+flask-cors==4.0.0
