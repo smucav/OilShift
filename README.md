@@ -117,10 +117,19 @@ See `results/plots/` and `results/summary_table.csv` for visuals and details.
 **Note**: Previous runs with monthly subsampling (~427 points) detected change points around 2001-12-31, 2007-12-31, and 2009-06-30, aligning with events like the 2003 Iraq invasion and 2008 financial crisis. Semi-annual subsampling reduces runtime while preserving key trends.
 
 
-## 🗓️ Next Steps
+## 🌐 Task 3: Interactive Dashboard
 
-* [ ] **Task 3:** Flask/React interactive dashboard
+* **Backend**: Flask APIs (`backend/app.py`) for prices, log returns, volatility, events, change points, and key indicators.
+* **Frontend**: React with Recharts (`frontend/src/App.js`) for interactive line charts, date filters, event/change point highlights, and a key indicators table. Features a modern, responsive design with loading/error states.
 
+* **Features**:
+  * Historical price and volatility trends with event (blue dashed lines) and change point (red dashed lines) markers.
+  * Date range filters with reset button for data exploration.
+  * Table of average price changes and volatility around events.
+  * Responsive design for desktop, tablet, and mobile.
+
+
+* **Run**: Start backend (`python backend/app.py`), then frontend (`cd frontend && npm start`). Access at `http://localhost:3000`.
 ---
 
 ## 📚 Data Sources
