@@ -1,5 +1,8 @@
 # OilShift: Brent Oil Price Change Point Analysis
 
+![Brent Oil Price with Events](results/demo_screen.png)
+
+
 ## 📈 Project Overview
 
 OilShift explores how major geopolitical and economic events influence Brent oil prices (1987–2022) using **Bayesian change point detection**. The goal is to deliver actionable insights for investors, policymakers, and energy firms facing oil market volatility.
