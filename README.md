@@ -6,7 +6,7 @@ OilShift explores how major geopolitical and economic events influence Brent oil
 
 * **Task 1**: Robust EDA and data preparation ✅
 * **Task 2**: Bayesian modeling (PyMC3) ✅
-* **Task 3**: Interactive dashboard (Flask + React) 🔜
+* **Task 3**: Interactive dashboard (Flask + React) ✅
 
 ---
 
