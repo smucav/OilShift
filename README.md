@@ -5,7 +5,7 @@
 OilShift explores how major geopolitical and economic events influence Brent oil prices (1987–2022) using **Bayesian change point detection**. The goal is to deliver actionable insights for investors, policymakers, and energy firms facing oil market volatility.
 
 * **Task 1**: Robust EDA and data preparation ✅
-* **Task 2**: Bayesian modeling (PyMC3) 🔜
+* **Task 2**: Bayesian modeling (PyMC3) ✅
 * **Task 3**: Interactive dashboard (Flask + React) 🔜
 
 ---
@@ -98,11 +98,28 @@ See `results/plots/` and `results/summary_table.csv` for visuals and details.
 
 ---
 
+## 🧠 Task 2: Bayesian Change Point Modeling
+
+**Model**: Implemented in PyMC 5.25.1 using continuous Beta priors for change point locations (tau) on semi-annual log returns (~70 points). Detects 2 change points to optimize convergence and runtime.
+
+
+* **Outputs**:
+
+* `results/change_point_results.csv`: Change point indices, dates, and posterior probabilities.
+* `results/plots/change_points.png`: Log returns with change points and events.
+* `results/plots/posterior_diagnostics.png`: Posterior distributions of model parameters.
+* `results/plots/trace_diagnostics.png`: Trace plots for convergence diagnostics.
+
+* **Diagnostics**: Targeting 0 divergences, R-hat < 1.1, ESS > 400 (run `notebooks/02_change_point_model.ipynb` to verify).
+
+* **Implementation**: See `notebooks/02_change_point_model.ipynb` and `scripts/change_point_model.py`.
+
+**Note**: Previous runs with monthly subsampling (~427 points) detected change points around 2001-12-31, 2007-12-31, and 2009-06-30, aligning with events like the 2003 Iraq invasion and 2008 financial crisis. Semi-annual subsampling reduces runtime while preserving key trends.
+
+
 ## 🗓️ Next Steps
 
-* [ ] **Task 2:** Bayesian change point modeling in PyMC3
 * [ ] **Task 3:** Flask/React interactive dashboard
-* [ ] **Final:** Comprehensive report & slides
 
 ---
 
